@@ -1,11 +1,9 @@
 # Importando o SQLite3
 import sqlite3
 
-# Conexão com o banco de dados (cria o banco se não existir)
 conn = sqlite3.connect('squad.db')
 cursor = conn.cursor()
 
-# Criação da tabela Squad
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS squad (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
